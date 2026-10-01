@@ -1,0 +1,21 @@
+services:
+  ec-orden-ms:
+    build:
+      context: ./ec-orden-ms
+    container_name: lambda26-ec-orden-ms
+    networks:
+      - red_kafka
+    command: tail -f /dev/null
+
+  ec-pago-ms:
+    build:
+      context: ./ec-pago-ms
+    container_name: lambda26-ec-pago-ms
+    networks:
+      - red_kafka
+    command: tail -f /dev/null
+
+networks:
+  red_kafka:
+    external: true
+    name: lambda26-kafka-net
