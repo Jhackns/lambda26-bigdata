@@ -1,2 +1,2 @@
 kafka-python==2.0.2
-paho-mqtt
+paho-mqtt==2.1.0
